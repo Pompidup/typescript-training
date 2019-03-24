@@ -136,33 +136,18 @@ describe('class', () => {
     // Add property setter for band
     // - it will add this band to the list of musician's bands'. How to store them?
     class Musician {
-      private _band: String;
-      private _allbands: Array<String> = [];
-
-      constructor(band: string) {
-        this.band = band;
+      private _band: string[] = [];
+      constructor() {
+        
       }
-      get allBands(): String {
-        let res = "this musician played in ";
-        for (let i = 0; i < this._allbands.length; i++) {
-          if (i === 0 && this._allbands.length === 1) {
-            res = res + this._allbands[i];
-          } else {
-            if (i + 1 === this._allbands.length) {
-              res = res + this._allbands[i];
-            } else {
-              res = res + this._allbands[i] + ", ";
-            };
-          };
-        };
-        return res;
+      get allBands() {
+        return `this musician played in ${this._band.join(', ')}`
       };
-      set band(param_a: String) {
-        this._band = param_a;
-        this._allbands.push(this._band);
+      set band(param_a) {
+        this.band.push(param_a);
       }
 }
-    const musician = new Musician('')
+    const musician = new Musician()
 
     musician.band = 'ABBA'
     expect(musician.allBands).toBe('this musician played in ABBA')
