@@ -5,6 +5,8 @@ describe('let declarations', () => {
   it('can be used in place of `var`', () => {
     // Declare musician using 'let'
     // Declare isDead using 'let'
+    let musician = 'John Lennon';
+    let isDead = true;
     expect(musician).toBe('John Lennon')
     expect(isDead).toBe(true)
   })
@@ -12,6 +14,8 @@ describe('let declarations', () => {
   it('can modify the value of a `let` variable', () => {
     // Delcare 'releaseName' using 'let', setting the value to 'ES6'
     // Change value of releaseName to be `ES2015`, the new name for ES6
+    let releaseName = 'ES6';
+    releaseName = 'ES2015';
     expect(releaseName).toBe('ES2015')
   })
 
@@ -49,13 +53,13 @@ describe('let declarations', () => {
     // replace dots (...) below with appropriate `let` statements to make expectations pass
 
     // NESTED BLOCK STATEMENTS
-    // let...
+    let message = 'John';
     expect(message).toBe('John')
     {
-      // let...
+      let message = 'Lennon';
       expect(message).toBe('Lennon')
       {
-        // let...
+        let message = 'died';
         expect(message).toBe('died')
       }
       expect(message).toBe('Lennon')

@@ -4,7 +4,12 @@ describe('class', () => {
     // Create a Musician class
     // Add a constructor that takes one param, the instrument.
     // Set this.instrument to the instrument passed in
-
+    class Musician {
+      instrument: string;
+      constructor(param_a?: string) {
+        this.instrument = param_a;
+      }
+    }
     const musician = new Musician()
     const ringo = new Musician('drums')
 
@@ -15,7 +20,12 @@ describe('class', () => {
   it('constructor can have default param values', () => {
     // Create a Musician class with a constructor
     // Make your class default (using default params) the instrument to 'guitar'
-
+    class Musician {
+      instrument: string = 'guitar';
+      constructor(param_a?: string){
+        this.instrument = param_a;
+      }
+    }
     const john = new Musician()
     const ringo = new Musician('drums')
 
@@ -26,7 +36,15 @@ describe('class', () => {
   it('can have instance methods', () => {
     // Create a Musician class, pass in the instrument to the constructor,
     // and add a play function to the class definition
-
+    class Musician {
+      instrument: string = 'guitar';
+      constructor(param_a?: string){
+        this.instrument = param_a;
+      }
+      play() {
+        return "I'm playing drums"
+      }
+    }
     const musician = new Musician()
 
     expect(musician.play).toBeDefined()
@@ -39,6 +57,16 @@ describe('class', () => {
     // create a static property instances (that will hold all created instances) and
     // create a static method create that encapsulates calling constructor
     //   and storing the reference (in instances array) and returns the instance
+    class Musician {
+      instrument: string = 'guitar';
+      static instances: Array;
+      constructor(param_a?: string){
+        this.instrument = param_a;
+      }
+      create() {
+        a faire
+      }
+    }
 
     expect(Musician.create).toBeDefined()
     expect(Musician.instances.length).toBe(0)
@@ -56,7 +84,18 @@ describe('class', () => {
     // Create a Musician class
     // Create a Rockman class that extends Musician
     // Add play method to Musician
+    class Musician {
+      instrument: string = 'guitar';
+      constructor(param_a?: string){
+        this.instrument = param_a;
+      }
+      play() {
+        return "I'm playing guitar"
+      }
+    }
+    class Rockman extends Musician {
 
+    }
     const rockman = new Rockman()
 
     expect(rockman instanceof Rockman).toBe(true)
