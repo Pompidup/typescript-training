@@ -1,14 +1,14 @@
 # typescript-training
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/riderx/typescript-training.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/riderx/typescript-training.svg?branch=exercises-step)](https://travis-ci.org/riderx/typescript-training)
+[![Build Status](https://travis-ci.org/Pompidup/typescript-training.svg?branch=exercises-step)](https://travis-ci.org/Pompidup/typescript-training)
 
 ## install
 
 Run:
 
     npm install
-
+ 
 ## run
 
 single run (compile & test once, useful for CI):
