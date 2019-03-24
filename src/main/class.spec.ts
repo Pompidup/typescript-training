@@ -136,18 +136,21 @@ describe('class', () => {
     // Add property setter for band
     // - it will add this band to the list of musician's bands'. How to store them?
     class Musician {
-      private _band: string[] = [];
+      _band: string[] = [];
       constructor() {
-        
+
       }
+
       get allBands() {
         return `this musician played in ${this._band.join(', ')}`
-      };
-      set band(param_a) {
-        this.band.push(param_a);
       }
-}
-    const musician = new Musician()
+
+      set band(value) {
+        this._band.push(value);
+      }
+    }
+
+const musician = new Musician()
 
     musician.band = 'ABBA'
     expect(musician.allBands).toBe('this musician played in ABBA')

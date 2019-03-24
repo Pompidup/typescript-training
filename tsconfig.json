@@ -11,7 +11,7 @@
     "sourceMap": false,
     "inlineSourceMap": true
   },
-  "include": [	  
+  "include": [
     "data/**/*.ts",
     "src/lib.ext.ts",
     "src/matchers.ts",
